@@ -66,7 +66,7 @@ public class VocabularyTool {
 		// Cheking the word is not empty
 		while (word.isEmpty()) {
 			System.out.println("Enter the word:");
-			word = scanner.nextLine().trim();
+			word = scanner.nextLine().trim().toLowerCase();
 			if (word.isEmpty()) {
 				System.out.println("Word cannot be empty. Please try again.");
 			}
@@ -100,7 +100,7 @@ public class VocabularyTool {
     // Search  a word in the vocabulary
     private void searchWord(Scanner scanner) {
         System.out.println("Enter the word to search:");
-        String word = scanner.nextLine().trim();
+        String word = scanner.nextLine().trim().toLowerCase();
 
         if (vocabulary.containsKey(word)) {
             System.out.println(word + " : " + vocabulary.get(word));
@@ -112,7 +112,7 @@ public class VocabularyTool {
     // Remove a word from the vocabulary
     private void removeWord(Scanner scanner) {
         System.out.println("Enter the word to remove:");
-        String word = scanner.nextLine().trim();
+        String word = scanner.nextLine().trim().toLowerCase();
 
         if (vocabulary.containsKey(word)) {
             vocabulary.remove(word);
